@@ -13,11 +13,12 @@
       <div class="container header__container">
         <nav class="nav">
           <ul class="menu list">
-            <li class="menu__item"><a class="menu__link link" href="">Головна</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Про нас</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Галерея</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Контакти</a></li>
-            <li class="menu__item"><a class="menu__link link" href="">Забронювати</a></li>
+            <li class="menu__item"><a class="menu__link link" href="#hero">Головна</a></li>
+            <li class="menu__item"><a class="menu__link link" href="#about">Про нас</a></li>
+            <li class="menu__item"><a class="menu__link link" href="#gallery">Галерея</a></li>
+            <li class="menu__item">
+              <a class="menu__link link" href="#reservation">Забронювати</a>
+            </li>
           </ul>
         </nav>
         <ul class="contacts list">
@@ -35,38 +36,101 @@
 
     <main>
       <!--HERO-->
-      <section class="hero section">
+      <section id="hero" class="hero section">
         <div class="container">
           <h1 class="title__hero">Котеджі цімбори</h1>
         </div>
       </section>
       <!--ABOUT US-->
-      <section class="section">
+      <section id="about" class="about section">
         <div class="container">
           <h2 class="about__title">Про нас</h2>
-          <div class="content">
-            <p class="about__content">
-              Котеджі Цімбори – розташовані в мальовничому куточку Прикарпаття урочище Горішків
-              (село Яблуниця). Осередок знаходиться на пагорбі, з якого відкриваються краєвиди на
-              гори: Шиса, Петрос, Говерла, Кукуль, Маришевська, Кобила, Рижі, Магурки, Хом’як,
-              Синяк, Горгани тощо. Кожен котедж – це дворівневі трикімнатні апартаменти з кухнею та
-              санвузлом у кожній кімнаті. На території Котеджів Цімбори є: Баня, Чан, Більярд,
-              Альтанки з каміном, Сон на бджолах, СноуТьюбінгова траса ( взимку), Озеро тощо.
-              Ідеально формат котеджів пасує для родин або компаній з 6-8 чоловік.
-            </p>
-            <div><img class="about__image" src="/images/about/1-min.jpg" alt="" /></div>
-            <div><img class="about__image" src="/images/about/20-min.jpg" alt="" /></div>
-          </div>
+          <p class="about__content">
+            Котеджі Цімбори – розташовані в мальовничому куточку Прикарпаття урочище Горішків (село
+            Яблуниця). Осередок знаходиться на пагорбі, з якого відкриваються краєвиди на гори:
+            Шиса, Петрос, Говерла, Кукуль, Маришевська, Кобила, Рижі, Магурки, Хом’як, Синяк,
+            Горгани тощо. Кожен котедж – це дворівневі трикімнатні апартаменти з кухнею та санвузлом
+            у кожній кімнаті. На території Котеджів Цімбори є: Баня, Чан, Більярд, Альтанки з
+            каміном, Сон на бджолах, СноуТьюбінгова траса ( взимку), Озеро тощо. Ідеально формат
+            котеджів пасує для родин або компаній з 6-8 чоловік.
+          </p>
         </div>
       </section>
       <!--GALLERY-->
-      <section><h2>Галерея</h2></section>
-      <!--CONTACTS-->
-      <section><h2>Контакти</h2></section>
+      <section id="gallery" class="gallery section">
+        <div class="container">
+          <h2 class="gallery__title">Галерея</h2>
+          <div class="gallery__container">
+            <figure class="gallery__item gallery__item--1">
+              <img src="/images/gallery/17-min.jpg" class="gallery__img" alt="" />
+            </figure>
+            <figure class="gallery__item gallery__item--2">
+              <img src="/images/gallery/26-min.jpg" class="gallery__img" alt="" />
+            </figure>
+            <figure class="gallery__item gallery__item--3">
+              <img src="/images/gallery/8-3-min.jpg" class="gallery__img" alt="" />
+            </figure>
+            <figure class="gallery__item gallery__item--4">
+              <img src="/images/gallery/8-min.jpg" class="gallery__img" alt="" />
+            </figure>
+            <figure class="gallery__item gallery__item--5">
+              <img src="/images/gallery/9-4-min.jpg" class="gallery__img" alt="" />
+            </figure>
+            <figure class="gallery__item gallery__item--6">
+              <img src="/images/gallery/9-min.jpg" class="gallery__img" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <!--RESERVATION-->
-      <section><h2>Забронювати</h2></section>
-      <footer>
-        <div>
+      <section id="reservation" class="section reservation">
+        <h2 class="reservation__title">Забронювати</h2>
+        <form action="#" class="modal-form">
+          <p class="modal-form__head">Залишіть свої данні і ми вам зателефонуємо</p>
+          <label class="modal-form__field">
+            Ім'я
+            <span class="modal-form__container">
+              <input
+                type="text"
+                class="modal-form__input"
+                name="user-name"
+                minlength="2"
+                pattern="[a-zA-Zа-яёА-ЯЁ]+"
+                title="Ім'я повинно складатись тільки з букв"
+                required
+              />
+            </span>
+          </label>
+          <label class="modal-form__field">
+            Телефон
+            <span class="modal-form__container">
+              <input
+                type="tel"
+                class="modal-form__input"
+                name="user-phone"
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="067-123-45-67"
+                required
+              />
+            </span>
+          </label>
+
+          <label class="modal-form__field-message">
+            Коментарій
+            <textarea
+              name="user-message"
+              class="modal-form__message"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+
+          <button type="submit" class="modal-form__btn">Відправити</button>
+        </form>
+      </section>
+      <!--FOOTER-->
+      <footer class="section footer">
+        <div class="container">
           <address class="address">
             <ul class="address__list list">
               <li class="address__item">
@@ -87,7 +151,7 @@
         </div>
 
         <div>
-          <p>Приєднуйтесь до нас в</p>
+          <p class="footer__content">Приєднуйтесь до нас в</p>
           <a href="" class="join__link link"> Instagram </a>
         </div>
       </footer>
